@@ -14,33 +14,50 @@ package OOP
 //    student1.introduce()
 //}
 
+                   //Secondary Constructor
 
-class Car1 {
-    var model:String
-    var color:String
+//class Car1 {
+//    var model:String
+//    var color:String
+//
+//
+//    constructor(model:String){
+//        this.model = model
+//        this.color = "No Color"
+//        println("Model Cons")
+// }
+//    constructor(model:String, color:String){
+//        this.model = model
+//        this.color = color
+//        println("Model & color Cons")
+//    }
+//
+//    fun horn(){
+//        println("$color $model horn : beep beep")
+//    }
+//
+//}
+//
+//
+//fun main() {
+//    val car1 = Car1("Hunda")
+//    val car2 = Car1("Honda", "blue")
+//    car1.horn()
+//    car2.horn()
+//}
 
 
-    constructor(model:String){
-        this.model = model
-        this.color = "No Color"
-        println("Model Cons")
- }
-    constructor(model:String, color:String){
-        this.model = model
-        this.color = color
-        println("Model & color Cons")
+           //Default Constructor
+
+class Car1(val model: String){
+    var formattedModel = ""
+    init {
+        formattedModel = model.uppercase()
+        println(formattedModel)
     }
-
-    fun horn(){
-        println("$color $model horn : beep beep")
-    }
-
 }
 
 
 fun main() {
-    val car1 = Car1("Hunda")
-    val car2 = Car1("Honda", "blue")
-    car1.horn()
-    car2.horn()
+    val car1 = Car1("TaTa Nexon")
 }
